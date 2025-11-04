@@ -1,0 +1,25 @@
+/* 1.tag name selector */
+header{
+    background-color: cadetblue;
+    height: 500px;
+}
+/* 2.id selector # symbol  only one tag*/
+#topic{
+    color: red;
+}
+/* 3.class selector . symbol more than one tag*/
+.para{
+    background-color:salmon;
+    font-size: 20px;
+    font-style: italic;
+
+}
+/*4. universal selector * symbol all tag */
+*{
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+
+}
+/* 5.group selector , symbol  */
+h2,#topic,.para{
+    text-align: center;
+}

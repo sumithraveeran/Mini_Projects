@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chess Board</title>
+<style>
+  :root{
+    --light: #f0d9b5;
+    --dark:  #b58863;
+    --board-size: min(80vmin, 640px); /* responsive size */
+  }
+
+  body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    margin:0;
+    background:#f5f5f7;
+  }
+
+  .board-wrapper{
+    width:var(--board-size);
+  }
+
+  .board {
+    display: grid;
+    gap: 0;
+    border: 6px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    /* grid used only for layout of rows */
+  }
+
+  /* row holds 8 squares placed in a row using flex */
+  .row{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width:100%;
+    aspect-ratio: 8 / 1; /* ensures squares are square when combined with overall aspect below */
+  }
+
+  /* Make each row+column square to form an overall square board */
+  .board .row { height: calc(var(--board-size) / 8); }
+
+  .square{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    user-select: none;
+    font-size: clamp(18px, 3.2vmin, 36px); /* piece size */
+    line-height: 1;
+    padding: 4px;
+  }
+
+  /* Coloring: even/odd rows alternate starting color */
+  /* Odd rows: square 1 = light, 2 = dark, ... */
+  .row:nth-child(odd) .square:nth-child(odd)  { background: var(--light); }
+  .row:nth-child(odd) .square:nth-child(even) { background: var(--dark); }
+
+  /* Even rows: square 1 = dark, 2 = light, ... */
+  .row:nth-child(even) .square:nth-child(odd)  { background: var(--dark); }
+  .row:nth-child(even) .square:nth-child(even) { background: var(--light); }
+
+  /* optional hover effect */
+  .square:hover { outline: 3px solid rgba(0,0,0,0.08); cursor: pointer; }
+
+  /* coordinates on edges (optional) */
+  .coords {
+    display:flex;
+    justify-content:space-between;
+    margin-top:8px;
+    font-size:0.9rem;
+    color:#0f0f0f;
+  }
+
+  /* accessibility: focus state */
+  .square:focus { outline: 3px solid #ffb100; }
+
+  /* small helper for dark/light piece coloring if using text pieces */
+  .white-piece { color: #fff; text-shadow: 0 0 2px rgba(0,0,0,0.6); }
+  .black-piece { color: #000; }
+</style>
+</head>
+<body>
+
+<div class="board-wrapper">
+  <div class="board" role="grid" aria-label="Chess board" style="aspect-ratio:1/1;">
+    <!-- Row 8 (top) -->
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0">♜</div>
+      <div class="square" role="gridcell" tabindex="0">♞</div>
+      <div class="square" role="gridcell" tabindex="0">♝</div>
+      <div class="square" role="gridcell" tabindex="0">♛</div>
+      <div class="square" role="gridcell" tabindex="0">♚</div>
+      <div class="square" role="gridcell" tabindex="0">♝</div>
+      <div class="square" role="gridcell" tabindex="0">♞</div>
+      <div class="square" role="gridcell" tabindex="0">♜</div>
+    </div>
+
+    <!-- Row 7 -->
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+      <div class="square" role="gridcell" tabindex="0">♟</div>
+    </div>
+
+    <!-- Rows 6 to 3 (empty) -->
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0"></div><!-- a6 -->
+      <div class="square" role="gridcell" tabindex="0"></div><!-- b6 -->
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+      <div class="square" role="gridcell" tabindex="0"></div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+      <div class="square" role="gridcell" tabindex="0">♙</div>
+    </div>
+
+    <!-- Row 1 (bottom) -->
+    <div class="row" role="row">
+      <div class="square" role="gridcell" tabindex="0">♖</div>
+      <div class="square" role="gridcell" tabindex="0">♘</div>
+      <div class="square" role="gridcell" tabindex="0">♗</div>
+      <div class="square" role="gridcell" tabindex="0">♕</div>
+      <div class="square" role="gridcell" tabindex="0">♔</div>
+/      <div class="square" role="gridcell" tabindex="0">♗</div>
+      <div class="square" role="gridcell" tabindex="0">♘</div>
+      <div class="square" role="gridcell" tabindex="0">♖</div>
+    </div>
+  </div>
+
+  <div class="coords">
+    <div>a b c d e f g h</div>
+    <div>1 2 3 4 5 6 7 8</div>
+  </div>
+</div>
+
+</body>
+</html>

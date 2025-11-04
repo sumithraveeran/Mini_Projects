@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* section{
+    display:grid;
+    grid-template-columns: 10% 20% 20% 20%;
+    grid-template-rows: 100px 100px 100px;
+    /* justify-content: space-evenly; */
+    /* background-color: lightgreen; */
+    /* align-content: space-evenly; */
+    /* height: 100vh; */
+    
+/* } */
+/* 
+section :nth-child(2n){
+background-color: rgb(101, 162, 223);
+border: 1px solid black;
+}
+section :nth-child(2n-1){
+    background-color:lightpink;
+    border: 1px solid black;
+}
+section :nth-child(1){
+    grid-column: span 3 ;
+    background-color: rgb(157, 226, 17);
+}
+section :nth-child(2){
+    grid-row: span 3;
+    background-color: tomato;
+} */ 
+ section{
+    /* background-color: yellowgreen; */
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 100px 100px 100px;
+
+ }
+ header{
+    background-color: rgb(25, 240, 79);
+    grid-column: span 3;
+
+ }
+ section :nth-child(2){
+    background-color: tomato;
+    grid-row: span 2;
+ }
+ main{
+    background-color: skyblue;
+ }
+ section :nth-child(4){
+    background-color: rgb(235, 145, 42);
+ }
+ footer{
+    background-color:rgb(240, 70, 240);
+    grid-column: span 2;
+ }
+ section :nth-child(1n){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+ }

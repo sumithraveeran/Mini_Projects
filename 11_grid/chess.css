@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    background-color:lightcoral;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer>.inner{
+    border:2px solid black;
+    height: 400px;
+    width: 400px;
+}
+.row1{
+    display: flex;
+}
+.row2{
+    display: flex;
+}
+.b{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+
+}
+.w{
+    background-color: white;
+    height: 50px;
+    width: 50px;
+}
+
+
+

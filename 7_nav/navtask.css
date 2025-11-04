@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 30px 20px;
+    font-size: 20px;
+
+}
+nav>ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+nav>ul>li:hover{
+    color: red;
+}
+nav>.but>button{
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+nav>.but>button:active{
+    background-color: yellow;
+    color: black;
+}

@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    background-image: linear-gradient(orange,red);
+    height: 100vh;
+     color: white; 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center ;
+     gap: 20px;
+    
+}
+.outer>h1{
+    text-align: center;
+    text-shadow: 1px 2px 5px black;
+    position:  relative;
+}
+.outer > h1::after{
+    content: "";
+    height: 3px;
+    background-image:linear-gradient(white,rgb(109, 104, 104),purple);
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 1s ease-in;
+
+}
+.outer > h1:hover::after{
+width: 100%;
+}
+.outer>.inner{
+    width: 90%;
+    height: 70%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;  
+}
+.inner>.box{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 5px black;
+    background-position: top;
+    background-size: cover;
+    transition: all 1s ease-in;
+
+}
+.inner>.box:hover{
+    background-position: bottom;
+}
+.inner>.box>h1{
+text-shadow: 1px 2px 3px black;
+}
+.inner>#box1{
+    grid-row: span 2;
+    background-image:url(https://static.toiimg.com/thumb/120089452/120089452.jpg?height=746&width=420&resizemode=76&imgsize=154482) ;
+    background-size: cover;
+}
+.inner>#box2{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJXeyIzehrBL8RHUJHtDKEK_B_4-tDChEnQ&s);
+    background-size: cover;
+}
+.inner>#box3{
+    background-image: url(https://i.ytimg.com/vi/ICQ2dMKefMY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAzdGa7DhR_4aXbyUI8cfJ2iWJv5w);
+    background-size: cover;
+}
+.inner>#box4{
+    grid-column: span 2;
+    background-image: url(https://media.istockphoto.com/id/1381637603/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=w64j3fW8C96CfYo3kbi386rs_sHH_6BGe8lAAAFS-y4=);
+    background-size: cover;
+}
+.inner>#box5{
+    background-image: url(https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/ocean_cover02.jpg);
+    background-size: cover;
+}
+.inner>#box6{
+    background-image: url(https://t4.ftcdn.net/jpg/03/42/73/59/360_F_342735989_f5O0FF07wSJi6i4VSoFcw1ZHddRgsiJN.jpg);
+    background-size: cover;
+}
+.inner>#box7{
+    background-image: url(https://i0.wp.com/www.traveling-up.com/wp-content/uploads/2023/03/South-Korea-Cherry-Blossoms-COVER.jpeg?fit=1200%2C675&ssl=1);
+    background-size: cover;
+}
+@keyframes up_down{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+
+    }
+    20%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+.outer>h1{
+    font-size: 30px;
+    animation: up_down 4s ease-in infinite;
+}
+
+
+
+
+
+

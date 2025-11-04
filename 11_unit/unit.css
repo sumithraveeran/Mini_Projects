@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(240, 159, 53);
+    height: 100vh;
+    width: 90vw;
+}
+.outer{
+    height: 400px;
+    width: 600px;
+    background-color: lightpink;
+}
+.outer>.inner{
+     height: 200px;
+     width: 300px; 
+    background-color: lightgreen;
+}

@@ -1,0 +1,111 @@
+header{
+    background-color: tomato;
+    height: 250px;
+}
+.card{
+    height: 200px;
+    width: 200px;
+    background-color: thistle;
+}
+header>h1{
+    color: darkblue;
+}
+.card>h1{
+    color: darkslategray;
+}
+header>#para2{
+    background-color: yellowgreen;
+
+}
+.card1{
+    height: 400px;
+    width: 600px;
+    background-color: yellow;
+}
+.card1>.box
+{
+    height:300px ;
+    width: 500px;
+    background-color: lightseagreen;
+}
+.card1>.box>.container{
+    height:200px ;
+    width: 400px;
+    background-color: slategray;
+}
+.card1 h2{
+    color: brown;
+}
+main>button{
+    background-color:purple;
+}
+/*  pesudo class selectoe- : symbol hover */
+main>button:hover{
+    font-size: 20px;
+    text-transform: capitalize;
+    background-color: palevioletred;
+}
+/* active */
+main>button:active{
+    background-color: orangered;
+    font-weight: bold;
+    color: aliceblue;
+}
+/* nth child */
+main>ol>li:nth-child(2n+2){
+    background-color: lightcoral;
+}
+main>ol>li:nth-child(2n+1){
+    background-color:yellowgreen;
+}
+.con>h1{
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1.4px;
+}
+.con>p{
+    font-size: 25px;
+    text-align: justify;
+    text-indent: 40px;
+}
+/* pseudo element selector...:: */
+.con>p::first-letter{
+    font-size: 40px;
+    color:darkmagenta;
+}
+.con>p::first-line{
+    background-color:lightpink;
+    font-style: italic;
+    font-weight: bold;
+}
+.con>h1::before{
+    content:"****";
+    color: darkred;
+}
+.con>h1::after{
+    content: "****";
+    color: darkred;
+}
+.con>p::selection{
+    background-color: lightgreen;
+    color: red;
+}
+.con>ul>li{
+    font-size: 30px;
+}
+.con>ul>li::marker{
+    color:darkgreen;
+}
+.con>ul>li:nth-child(2n)::marker{
+    color: darkred;
+}
+/* attribute selector...[] */
+form>input[type="text"]{
+    background-color:lightcoral;
+    color:crimson;
+}
+form>input{
+    height: 40px;
+    width: 280px;
+    font-size: 30px;
+}

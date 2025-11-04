@@ -1,0 +1,32 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.outer>h1{
+
+    color: white;
+    text-transform: uppercase;
+}
+.inner{
+    height: 250px;
+    width: 250px;
+    background-color: yellowgreen;
+    /* transition: all 2s ease-in 1s; */
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s;
+}
+.inner:hover{
+    background-color: orchid;
+    border-radius: 50%;
+}

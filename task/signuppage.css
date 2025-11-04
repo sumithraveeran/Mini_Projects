@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.outer{
+    height: 100vh;
+    display: flex;  
+}
+.outer>.left{
+    background-color:white;
+    flex-basis: 45%;
+   
+}
+.outer>.left>img{
+    height: 100%;
+    width: 100%;
+}
+.outer>.right{
+    background-color:rgb(78, 172, 204);
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+.outer>.right>h1{
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 2px 5px black;
+    font-size: 35px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+.outer>.right>.Signup{
+    background-color: white;
+    height: 430px;
+    width: 350px;
+    padding: 25px 20px;
+    border-radius: 20px; 
+}
+.right>.Signup>form>label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px; 
+}
+.right>.Signup>form>input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    outline: none;
+}
+.right>.Signup>form>input:focus{
+    border: 2px solid blue;
+}
+.right>.Signup>form>button{
+    width: 100%;
+    padding: 15px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.right>.Signup>form>button:hover{
+      background-color: rgb(31, 148, 31);
+}
+.right>.Signup>.footer{
+    display: flex;
+    justify-content: space-between; 
+}
+.right>.Signup>.footer>p{
+    font-weight: bold;
+    font-size: 17px;
+
+}
+.right>.Signup>.footer>a{
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    
+}

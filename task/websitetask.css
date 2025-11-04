@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    height: 100vh;
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.outer>.inner{
+    background-color: white;
+    width: 85%;
+    height: 85%;
+    box-shadow:  0 2px 8px black;
+    border-radius: 20px;
+}
+.inner>nav{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    padding: 20px 60px;
+}
+nav>ul{
+    display: flex;
+    gap: 25px;
+}
+nav>ul>li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    
+}
+.inner>nav>.but>button{
+    padding: 15px;
+    border-radius: 10px; 
+    text-transform: capitalize;
+    
+}
+.inner>nav>.but>button:nth-child(1){
+background-color: dodgerblue;
+color: white;
+}
+.main{
+    display: flex;
+}
+main>.left{
+    flex-basis: 50%;
+    flex-direction:column;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+.left>input{
+    padding: 10px;
+    width: 80%;
+    padding-top: 10px;
+}
+
+.left>h1{
+    font-size: 38px;
+    padding-top:20px ;
+}
+.left>p{
+    font-size: 20px;
+    flex-wrap: wrap;
+    text-align: justify;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    word-spacing: 1px;
+    padding-top: 30px;
+}
+.main>.left>button{
+    padding: 15px;
+    border-radius: 10px; 
+    text-transform: capitalize;
+    background-color: dodgerblue;
+
+}
+.main>.left>.foot{
+    display: flex;
+    gap: 130px;
+    padding: 30px ;
+    width: 100%;
+
+}
+.main>.right{
+    flex-basis: 50%;
+    display: flex;
+}
+  .right>img{
+height: 60%;
+position: absolute;
+bottom: 10px;
+transform: translateY(-60px);
+padding-left:70px ;
+  }  

@@ -1,0 +1,17 @@
+header{
+    background-color: silver;
+}
+#topic{
+     text-align: center;
+     color: purple;
+     text-transform:lowercase;
+     text-decoration: overline;
+     letter-spacing: 5px;
+     text-shadow: 2px 3px 2px black;
+}
+#para{
+    font-size: 20px;
+    text-align:justify;
+    word-spacing: 5px;
+    text-indent: 50px;
+}

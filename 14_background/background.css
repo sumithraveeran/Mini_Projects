@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    height: 100vh;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer>.inner{
+    height: 500px;
+    width: 800px;
+    background-color: yellowgreen;
+    background-image: url("https://bambinos.live/images/blog/my-favourite-cartoon.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px  black;
+} 

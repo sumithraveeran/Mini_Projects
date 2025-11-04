@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    background-color: yellowgreen;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1.6px;
+    text-shadow: 1px 1px 1px black;
+
+}
+.outer>.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://static0.cbrimages.com/wordpress/wp-content/uploads/2024/09/the-mcu-s-most-beloved-character-is-even-stronger-in-the-comics.jpg?w=1200&h=675&fit=crop");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+    background-attachment: fixed;
+
+}
+.outer>.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://wallpapers.com/images/featured/captain-america-uymfdo8a063hcbxb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+.outer>.box3{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+background-image: url("https://cdn.marvel.com/content/2x/004tho_ons_mas_mob_04.jpg");
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+.outer>.box4{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2015/03/11/01/33/hulk-667988_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

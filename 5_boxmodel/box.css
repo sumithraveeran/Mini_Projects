@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box1{
+    background-color:plum;
+    height: 200px;
+    width: 300px;
+    /* padding: 20px; */
+    /* padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px; */
+    padding: 20px 30px 20px 30px;
+    border: 3px solid black;
+    /* margin: 2x;*/
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+header>h1{
+    margin-bottom: 10px;
+}
+header>button{
+    margin-top: 20px;
+    padding: 20px 20px;
+}
+.box1>h2{
+    margin-bottom: 20px;
+}
+.box2>h2{
+    margin-bottom: 10px;
+}
+.box2{
+    background-color:seagreen;
+    height: 200px;
+    width: 350px;
+    padding: 20px;
+    margin-left: 40px;
+    /* border: 3px solid black; */
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+.box3{
+    height: 200px;
+    width: 300px;
+    /* border: 3px solid blue; */
+    border-top: 5px solid black;
+    border-bottom: 5px double black;
+    border-left: 5px dashed black;
+    border-right: 5px dotted black;
+    border-radius: 20px;
+    background-color: yellowgreen;
+    margin:50px;
+}
+.circle{
+    border:3px solid black;
+    height: 200px;
+    width: 200px;
+    margin: 40px;
+    border-radius: 50%;
+}
+.card1{
+    height: 200px;
+    width: 300px;
+    background-color: lightsalmon;
+    padding: 20px;
+    border: 3px solid black;
+
+}
+.card2{
+    height: 200px;
+    width: 300px;
+    background-color:lightgreen;
+    margin-top: 20px;
+}

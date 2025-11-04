@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer{
+    height: 100vh;
+}
+.box1{
+    width: 100vw;
+    height: 33%;
+    background-color: orange;
+}
+.box2{
+    width: 100vw;
+    height: 33%;
+    background-color: rgb(252, 251, 249);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.box3{
+    width: 100vw;
+    height:33% ;
+    background-color: green;
+}
+.flag>img{
+    /* background-color: blue; */
+    height:200px ;
+    width: 200px;
+    border-radius: 50%;
+    transform: rotate();
+      transition: all 0.5s ease-in;
+    
+}
+.outer>.box2>.flag>img:hover{
+    transform: rotate(180deg);
+}
